@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pndb_admin/presentation/screens/banner_management_screen.dart';
 import 'package:pndb_admin/presentation/screens/channel_partner/channel_partner.dart';
-import 'package:pndb_admin/presentation/screens/commission_management_screen.dart';
+import 'package:pndb_admin/presentation/screens/commission/commission_management_screen.dart';
 import 'package:pndb_admin/presentation/screens/dashboard_screen.dart';
 import 'package:pndb_admin/presentation/screens/merchant/merchant_management_screen.dart';
 import 'package:pndb_admin/presentation/screens/offer_cashback_management_screen.dart';

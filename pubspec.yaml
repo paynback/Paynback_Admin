@@ -50,7 +50,6 @@ dependencies:
   path_provider: ^2.1.5
   permission_handler: ^12.0.0+1
   meta: ^1.16.0
-  flutter_dotenv: ^5.2.1
   excel: ^4.0.6
   web: ^1.1.1
   file_picker: ^10.1.9
@@ -87,9 +86,8 @@ flutter:
     - asset/logo/
     - asset/images/BG_patter.jpg
     - asset/images/qr_template.png
-    - asset/images/yammy.png
-    - .env
-  #   - images/a_dot_ham.jpeg
+    - asset/images/yammy.png 
+    # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

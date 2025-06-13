@@ -4,6 +4,7 @@ import 'package:pndb_admin/data/services/admin_login_service.dart';
 import 'package:pndb_admin/data/services/all_merchant_service.dart';
 import 'package:pndb_admin/data/services/channel_partner_service.dart';
 import 'package:pndb_admin/data/services/user_service.dart';
+import 'package:pndb_admin/presentation/viewmodels/commission/commission_bloc.dart';
 import 'package:pndb_admin/presentation/viewmodels/fetch%20merchant/fetch_merchant_bloc.dart';
 import 'package:pndb_admin/presentation/viewmodels/fetch_channel_partners/fetch_channel_partners_bloc.dart';
 import 'package:pndb_admin/presentation/viewmodels/fetch_user/fetch_user_bloc.dart';
@@ -13,6 +14,8 @@ import 'package:pndb_admin/presentation/viewmodels/qr/downloaded_qr/downloaded_q
 import 'package:pndb_admin/presentation/viewmodels/qr/qr%20managemenet/qr_management_bloc.dart';
 import 'package:pndb_admin/presentation/viewmodels/qr/assigned_qr/assigned_qr_bloc.dart';
 import 'package:pndb_admin/presentation/viewmodels/submit_settlement/submit_settlement_bloc.dart';
+import 'package:pndb_admin/presentation/viewmodels/update_all_commission/update_all_commission_bloc.dart';
+import 'package:pndb_admin/presentation/viewmodels/update_single_commission/update_single_commission_bloc.dart';
 import 'package:pndb_admin/presentation/viewmodels/verify%20merchant/verify_merchant_bloc.dart';
 
 class AppMultiBlocProvider {
@@ -46,6 +49,9 @@ class AppMultiBlocProvider {
         BlocProvider<FetchChannelPartnersBloc>(
           create: (_) => FetchChannelPartnersBloc(api: ChannelPartnerService())..add(FetchChannelPartnersRequested()),
         ),
+        BlocProvider<CommissionBloc>(create: (_) => CommissionBloc()..add(FetchMerchants())),
+        BlocProvider<UpdateAllCommissionBloc>(create: (_) => UpdateAllCommissionBloc()),
+        BlocProvider<UpdateSingleCommissionBloc>(create: (_) => UpdateSingleCommissionBloc()),
       ],
       child: child,
     );
