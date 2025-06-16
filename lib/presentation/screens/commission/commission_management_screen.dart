@@ -74,7 +74,7 @@ class _CommissionManagementScreenState extends State<CommissionManagementScreen>
                 ElevatedButton(
                   onPressed: () {
                     final rate = int.tryParse(_commissionController.text.trim());
-                    if (rate != null) {
+                    if (rate != null && rate>=0 && rate<=100) {
                       context.read<UpdateAllCommissionBloc>().add(UpdateCommissionRate(rate));
                     }
                   },

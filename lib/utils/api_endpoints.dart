@@ -1,6 +1,6 @@
 class ApiConstants {
   // Base URL
-  static const String baseUrl = 'https://stop-jerry-ascii-q.trycloudflare.com';
+  static const String baseUrl = 'https://backend.paynback.com';
 
 
   // Endpoints
